@@ -46,3 +46,22 @@ app.post('/users/pdf', async (req, res) => {
 app.listen(3000, () => {
   console.log('Server listening on port 3000');
 });
+
+
+
+/* terminal test 
+curl --location --request POST 'http://localhost:3000/users/upload'
+--header 'Content-Type: application/json'
+--data-raw '{
+"email": "john.doe@example.com",
+"firstName": "John",
+"lastName": "Doe",
+"image": "image.jpg"
+}'
+
+curl --location --request POST 'http://localhost:3000/users/pdf'
+--header 'Content-Type: application/json'
+--data-raw '{
+"email": "john.doe@example.com"
+}'
+*/
